@@ -36,7 +36,7 @@ window.addEventListener('load', () => {
             },
             processUser: function (event) {
                 event.preventDefault();
-                if (this.operation === "Register") {
+                if (this.operation === "Registrar") {
                     this.user.id = this.findMaxId() + 1;
                     this.users.push({
                         id: this.user.id,
