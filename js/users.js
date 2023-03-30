@@ -10,8 +10,8 @@ window.addEventListener('load', () => {
                     username: '',
                     email: ''
                 },
-                operation: "Registrar",
-                userIndex: -1
+                operation: "Register",
+                userIndex: 1
             }
         },
         created() {
@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
             listUsers: async function () {
                 const res = await fetch('https://jsonplaceholder.typicode.com/users');
                 const data = await res.json();
-                this.users = data.slice(0, 5);
+                this.users = data.slice(0, 6);
                 this.updateLocalStorage();
             },
             updateLocalStorage: function () {
@@ -36,7 +36,7 @@ window.addEventListener('load', () => {
             },
             processUser: function (event) {
                 event.preventDefault();
-                if (this.operation === "Registrar") {
+                if (this.operation === "Register") {
                     this.user.id = this.findMaxId() + 1;
                     this.users.push({
                         id: this.user.id,
