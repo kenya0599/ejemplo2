@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
                     username: '',
                     email: ''
                 },
-                operation: "Register",
+                operation: "Registrar",
                 userIndex: -1
             }
         },
